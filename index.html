@@ -1,56 +1,58 @@
 <html>
-
-<head>
+  <head>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore-umd-min.js"></script>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap"
-        rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
     <script src="./index.js"></script>
 
     <div id="layout">
-        <div>
-            <div id="header">
-                <div class="card" style=" background-color: #1976d2; color:white">
-                    <span style="font-size: 2rem; margin: 10px;">
-                        Academic Writer - AI Support for IELTS Writing
-                    </span>
-
-                </div>
-            </div>
-
+      <div>
+        <div id="header">
+          <div class="card" style="background-color: #1976d2; color: white">
+            <span style="font-size: 2rem; margin: 10px">
+              Academic Writer - AI Support for IELTS Writing
+            </span>
+          </div>
         </div>
-        <div>
-            <div class="card" id="textEditor">
-                <textarea id="mainInput" placeholder="Start your writing here..."></textarea>
-                <div style="margin: 0 auto;">
-                    <button id="btCompose" onclick="onCompose()">Compose !</button>
-                </div>
-                <div id="loadingPane"
-                    style="height: 30px; width: 70%; align-self: center;margin: 10px; text-align: center;">
-                    <span style="font-size: 20px;">
-                        Thinking...
-                    </span>
-                    <div class="meter animate">
-                        <span id="progress" style="width: 0%"><span></span></span>
-                    </div>
-                </div>
-
-                <ul id="suggestionList" style="height: 35vh; overflow-y: scroll;">
-
-                </ul>
+      </div>
+      <div>
+        <div class="card" id="textEditor">
+          <textarea
+            id="mainInput"
+            placeholder="Start your writing here..."
+          ></textarea>
+          <div style="margin: 0 auto">
+            <button id="btCompose" onclick="onCompose()">Compose !</button>
+          </div>
+          <div
+            id="loadingPane"
+            style="
+              height: 30px;
+              width: 70%;
+              align-self: center;
+              margin: 10px;
+              text-align: center;
+            "
+          >
+            <span style="font-size: 20px"> Thinking... </span>
+            <div class="meter animate">
+              <span id="progress" style="width: 0%"><span></span></span>
             </div>
+          </div>
 
+          <ul id="suggestionList" style="height: 35vh; overflow-y: scroll"></ul>
         </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
